@@ -1,0 +1,13 @@
+.bronify-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.bronify-layout__main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  background: #1a1a1a;
+}

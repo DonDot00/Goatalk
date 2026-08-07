@@ -19,6 +19,7 @@ export default function BronifyPage() {
 
   return (
     <div className="bronify-page">
+      <h2>Bronify</h2>
       <div className="bronify-page__toolbar">
         <input
           type="text"

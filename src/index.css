@@ -5,17 +5,74 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* App palette -- one source of truth so every component stays in sync. */
+  --bg-app: #1a1a1a;
+  --bg-panel: #20222a;
+  --bg-tile: #2a2d36;
+  --bg-tile-hover: #383c46;
+  --bg-hover: #24262e;
+  --border: #2a2a2a;
+
+  --text: #dcddde;
+  --text-bright: #fff;
+  --text-muted: #8a8d93;
+  --text-dim: #6d6f78;
+
+  --accent: #5865f2;
+  --accent-rgb: 88, 101, 242;
+  --accent-hover: #4752c4;
+
+  --danger: #ed4245;
+  --success: #57f287;
+  --success-rgb: 87, 242, 135;
+  --warning: #f5c451;
+  --warning-rgb: 245, 197, 81;
+  --neutral: #b5b7bc;
+  --neutral-rgb: 138, 141, 147;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
+  height: 100%;
   font-family: var(--sans);
+  background: var(--bg-app);
+  overflow-x: hidden;
 }
 
 #root {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* Dark, unobtrusive scrollbars to match the theme instead of the OS default. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-tile-hover) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--bg-tile-hover);
+  border-radius: 999px;
 }

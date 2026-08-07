@@ -2,11 +2,18 @@
   display: flex;
   flex-direction: column;
   width: 280px;
+  flex-shrink: 0;
   height: 100vh;
-  background: #20222a;
-  border-left: 1px solid #2a2a2a;
-  color: #dcddde;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border);
+  color: var(--text);
   overflow-y: auto;
+}
+
+@media (max-width: 900px) {
+  .liked-songs-panel {
+    display: none;
+  }
 }
 
 .liked-songs-panel h2 {
@@ -14,14 +21,14 @@
   padding: 16px;
   font-size: 16px;
   font-weight: 700;
-  color: #fff;
-  border-bottom: 1px solid #2a2a2a;
+  color: var(--text-bright);
+  border-bottom: 1px solid var(--border);
 }
 
 .liked-songs-panel__empty {
   padding: 16px;
   font-size: 13px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .liked-songs-list {
@@ -42,7 +49,7 @@
 }
 
 .liked-song:hover {
-  background: #2a2d36;
+  background: var(--bg-tile);
 }
 
 .liked-song__info {
@@ -55,7 +62,7 @@
 .liked-song__title {
   font-size: 13px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-bright);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -68,7 +75,7 @@
 
 .liked-song__artist {
   font-size: 12px;
-  color: #8a8d93;
+  color: var(--text-muted);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -77,14 +84,14 @@
 .liked-song__duration {
   flex-shrink: 0;
   font-size: 11px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .liked-song__unlike {
   flex-shrink: 0;
   border: none;
   background: transparent;
-  color: #ed4245;
+  color: var(--danger);
   font-size: 14px;
   cursor: pointer;
   padding: 2px;

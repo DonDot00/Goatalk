@@ -2,11 +2,11 @@
   display: flex;
   gap: 12px;
   padding: 8px 16px;
-  color: #dcddde;
+  color: var(--text);
 }
 
 .post:hover {
-  background: #24262e;
+  background: var(--bg-hover);
 }
 
 .post--grouped {
@@ -25,8 +25,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #5865f2;
-  color: #fff;
+  background: var(--accent);
+  color: var(--text-bright);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +37,7 @@
 .post__time--hover {
   opacity: 0;
   font-size: 10px;
-  color: #8a8d93;
+  color: var(--text-muted);
   line-height: 22px;
 }
 
@@ -59,12 +59,12 @@
 .post__user {
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-bright);
 }
 
 .post__time {
   font-size: 11px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .post__title {
@@ -73,7 +73,7 @@
   margin-top: 2px;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-bright);
   text-decoration: none;
 }
 
@@ -111,14 +111,14 @@
   border: none;
   border-radius: 4px;
   background: transparent;
-  color: #8a8d93;
+  color: var(--text-muted);
   font-size: 12px;
   cursor: pointer;
 }
 
 .post__action:hover {
-  background: #2a2d36;
-  color: #dcddde;
+  background: var(--bg-tile);
+  color: var(--text);
 }
 
 .post__action-icon {
@@ -126,9 +126,9 @@
 }
 
 .post__action--liked {
-  color: #ed4245;
+  color: var(--danger);
 }
 
 .post__action--liked:hover {
-  color: #ed4245;
+  color: var(--danger);
 }

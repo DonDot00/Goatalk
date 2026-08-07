@@ -2,11 +2,18 @@
   display: flex;
   flex-direction: column;
   width: 240px;
+  flex-shrink: 0;
   height: 100vh;
-  background: #20222a;
-  border-right: 1px solid #2a2a2a;
-  color: #dcddde;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+  color: var(--text);
   overflow-y: auto;
+}
+
+@media (max-width: 860px) {
+  .sidebar {
+    display: none;
+  }
 }
 
 .sidebar h2 {
@@ -14,8 +21,8 @@
   padding: 16px;
   font-size: 16px;
   font-weight: 700;
-  color: #fff;
-  border-bottom: 1px solid #2a2a2a;
+  color: var(--text-bright);
+  border-bottom: 1px solid var(--border);
 }
 
 .sidebar h3 {
@@ -25,7 +32,7 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .channel-list {
@@ -44,18 +51,18 @@
   padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
-  color: #96989d;
+  color: var(--text-muted);
   transition: background 0.1s ease, color 0.1s ease;
 }
 
 .channel-item:hover {
-  background: #2a2d36;
-  color: #dcddde;
+  background: var(--bg-tile);
+  color: var(--text);
 }
 
 .channel-item.active {
-  background: #383c46;
-  color: #fff;
+  background: var(--bg-tile-hover);
+  color: var(--text-bright);
 }
 
 .channel-icon {
@@ -77,8 +84,8 @@
   height: 18px;
   padding: 0 5px;
   border-radius: 9px;
-  background: #ff4d4f;
-  color: #fff;
+  background: var(--danger);
+  color: var(--text-bright);
   font-size: 11px;
   font-weight: 700;
   line-height: 18px;

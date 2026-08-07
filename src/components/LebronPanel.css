@@ -2,11 +2,18 @@
   display: flex;
   flex-direction: column;
   width: 280px;
+  flex-shrink: 0;
   height: 100vh;
-  background: #20222a;
-  border-left: 1px solid #2a2a2a;
-  color: #dcddde;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border);
+  color: var(--text);
   overflow-y: auto;
+}
+
+@media (max-width: 1200px) {
+  .right-panel {
+    display: none;
+  }
 }
 
 .right-panel h2 {
@@ -14,13 +21,13 @@
   padding: 16px;
   font-size: 16px;
   font-weight: 700;
-  color: #fff;
-  border-bottom: 1px solid #2a2a2a;
+  color: var(--text-bright);
+  border-bottom: 1px solid var(--border);
 }
 
 .right-panel__section {
   padding: 16px;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid var(--border);
 }
 
 .right-panel__section h3 {
@@ -29,7 +36,7 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .stats-grid {
@@ -45,18 +52,18 @@
   gap: 2px;
   padding: 10px 8px;
   border-radius: 8px;
-  background: #2a2d36;
+  background: var(--bg-tile);
 }
 
 .stat-tile__value {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-bright);
 }
 
 .stat-tile__label {
   font-size: 11px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .accolades-list {
@@ -71,7 +78,7 @@
 .accolades-list li {
   padding: 8px 10px;
   border-radius: 6px;
-  background: #2a2d36;
+  background: var(--bg-tile);
   font-size: 13px;
 }
 
@@ -87,7 +94,7 @@
 .record-item {
   padding: 10px;
   border-radius: 8px;
-  background: #2a2d36;
+  background: var(--bg-tile);
 }
 
 .record-item__header {
@@ -100,13 +107,13 @@
 .record-item__label {
   font-size: 13px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-bright);
 }
 
 .record-item__detail {
   margin: 6px 0 0;
   font-size: 12px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .record-status {
@@ -119,23 +126,23 @@
 }
 
 .record-status--broken {
-  background: rgba(87, 242, 135, 0.15);
-  color: #57f287;
+  background: rgba(var(--success-rgb), 0.15);
+  color: var(--success);
 }
 
 .record-status--approaching {
-  background: rgba(88, 101, 242, 0.15);
-  color: #8790f5;
+  background: rgba(var(--accent-rgb), 0.15);
+  color: var(--accent);
 }
 
 .record-status--tied {
-  background: rgba(138, 141, 147, 0.2);
-  color: #b5b7bc;
+  background: rgba(var(--neutral-rgb), 0.2);
+  color: var(--neutral);
 }
 
 .record-status--held {
-  background: rgba(245, 197, 81, 0.15);
-  color: #f5c451;
+  background: rgba(var(--warning-rgb), 0.15);
+  color: var(--warning);
 }
 
 .totals-list {
@@ -152,25 +159,25 @@
   flex-direction: column;
   padding: 10px;
   border-radius: 8px;
-  background: #2a2d36;
+  background: var(--bg-tile);
 }
 
 .total-item__value {
   font-size: 16px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-bright);
 }
 
 .total-item__label {
   margin-top: 2px;
   font-size: 12px;
-  color: #dcddde;
+  color: var(--text);
 }
 
 .total-item__note {
   margin-top: 2px;
   font-size: 11px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .milestones-list {
@@ -185,19 +192,19 @@
 .milestone-item {
   padding: 10px;
   border-radius: 8px;
-  background: #2a2d36;
+  background: var(--bg-tile);
 }
 
 .milestone-item__label {
   font-size: 13px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-bright);
 }
 
 .milestone-item__detail {
   margin: 4px 0 0;
   font-size: 12px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .fun-facts-list {
@@ -212,8 +219,8 @@
 .fun-facts-list li {
   padding: 8px 10px;
   border-radius: 6px;
-  background: #2a2d36;
+  background: var(--bg-tile);
   font-size: 12px;
   line-height: 1.5;
-  color: #dcddde;
+  color: var(--text);
 }

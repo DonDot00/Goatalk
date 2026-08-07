@@ -4,12 +4,13 @@
   flex: 1;
   min-height: 0;
   padding: 16px;
-  color: #dcddde;
+  color: var(--text);
   overflow-y: auto;
 }
 
 .bronify-page__toolbar {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -18,18 +19,18 @@
   padding: 10px 14px;
   border: none;
   border-radius: 8px;
-  background: #2a2d36;
-  color: #dcddde;
+  background: var(--bg-tile);
+  color: var(--text);
   font-size: 14px;
   font-family: inherit;
 }
 
 .bronify-page__search::placeholder {
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .bronify-page__search:focus {
-  outline: 2px solid #5865f2;
+  outline: 2px solid var(--accent);
   outline-offset: -1px;
 }
 
@@ -37,15 +38,15 @@
   padding: 10px 16px;
   border: none;
   border-radius: 8px;
-  background: #5865f2;
-  color: #fff;
+  background: var(--accent);
+  color: var(--text-bright);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .bronify-page__add-toggle:hover {
-  background: #4752c4;
+  background: var(--accent-hover);
 }
 
 .add-track-form {
@@ -55,7 +56,7 @@
   margin-top: 12px;
   padding: 12px;
   border-radius: 8px;
-  background: #20222a;
+  background: var(--bg-panel);
 }
 
 .add-track-form input {
@@ -64,29 +65,29 @@
   padding: 10px 12px;
   border: none;
   border-radius: 8px;
-  background: #2a2d36;
-  color: #dcddde;
+  background: var(--bg-tile);
+  color: var(--text);
   font-size: 14px;
   font-family: inherit;
 }
 
 .add-track-form input::placeholder {
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .add-track-form button {
   padding: 10px 16px;
   border: none;
   border-radius: 8px;
-  background: #5865f2;
-  color: #fff;
+  background: var(--accent);
+  color: var(--text-bright);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .add-track-form button:hover {
-  background: #4752c4;
+  background: var(--accent-hover);
 }
 
 .track-list {
@@ -107,7 +108,7 @@
 }
 
 .track-row:hover {
-  background: #24262e;
+  background: var(--bg-hover);
 }
 
 .track-row__info {
@@ -120,7 +121,7 @@
 .track-row__title {
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-bright);
   text-decoration: none;
   width: fit-content;
 }
@@ -131,33 +132,33 @@
 
 .track-row__artist {
   font-size: 12px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .track-row__duration {
   flex-shrink: 0;
   font-size: 12px;
-  color: #8a8d93;
+  color: var(--text-muted);
 }
 
 .track-row__like {
   flex-shrink: 0;
   border: none;
   background: transparent;
-  color: #8a8d93;
+  color: var(--text-muted);
   font-size: 16px;
   cursor: pointer;
   padding: 2px 6px;
 }
 
 .track-row__like:hover {
-  color: #dcddde;
+  color: var(--text);
 }
 
 .track-row__like--liked {
-  color: #ed4245;
+  color: var(--danger);
 }
 
 .track-row__like--liked:hover {
-  color: #ed4245;
+  color: var(--danger);
 }
